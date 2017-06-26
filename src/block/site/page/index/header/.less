@@ -1,0 +1,119 @@
+.index-page-header{
+	position: relative;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	color: @white;
+	overflow: hidden;
+	@media @media-screen {background-attachment: fixed;}
+	&::before{
+		content: '';
+		position: absolute;
+		z-index: 1;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		@media @media-size-xs {
+			background-color: fadeout(@blue, 80%);
+		}
+	}
+	&::after{
+		content: '';
+		position: absolute;
+		z-index: 2;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-image: url("@{url-path-img}/default/bg-index-header-bottom.png");
+		background-position: center bottom;
+		@media @media-size-xs {height: 100px; display: none}
+		@media @media-notsmart{height: 290px;}
+		@media @media-size-sm-l {height: 100px;}
+	} 
+	
+}
+._iph__{
+	&container{
+		position: relative;
+		z-index: 3;
+		/*@media @media-size-xs{
+			min-height: ~"calc(100vh - @{navbar-top-xs})";
+		}*/
+		@media @media-size-xs {
+			padding-top: 70px;
+			padding-bottom: 70px;
+		}
+		@media @media-notsmart{padding-bottom: 290px;}
+		@media @media-size-sm-l {
+			padding-bottom: 100px;
+		}
+		@media @media-size-sm{
+			min-height: ~"calc(100vh - @{navbar-top-sm})";			
+		}
+		@media @media-screen{	
+			min-height: 100vh;	
+			//min-height: ~"calc(100vh - @{navbar-top-screen})";
+		}
+	}
+	&inner{
+		text-align: center;
+		@media @media-notsmart {
+			position: absolute;
+			top: 50%;
+			transform: translate(-50%,-50%);
+			width: ~"calc(100% - 15px)";
+			left: 50%;
+			transition: @trs-site;
+		}		
+	}
+	&scroll{
+		width: 60px;
+		height: 60px;
+		position: absolute;
+		left: ~"calc(50% - 30px)";
+		bottom: 230px;
+		animation: scroll 1.5s infinite ease-in-out;
+		@media @media-size-xs {display: none;}
+		@media @media-size-sm-l {bottom: 100px;}
+	}
+	&heading{
+		@media @media-device {
+			margin-bottom: 35px;
+		}
+		@media @media-screen {
+			margin-bottom: 2.7vw;
+		}
+	}
+	&heading-big{
+		color: @green;
+		.calcFontSize(50, 180, 320, 1680);
+		.calcLineHeight(40, 140, 320, 1680);
+		@media @media-device {
+			margin-bottom: 30px;
+		}
+		@media @media-screen {
+			margin-bottom: 2.5vw;
+		}
+	}
+	&heading-small{
+		color: @green;
+		.calcFontSize(28, 58, 320, 1680);
+		.calcLineHeight(30, 60, 320, 1680);
+		margin: 0;
+		display: block;		
+	}
+	&note{
+		color: @white;
+		.calcFontSize(16, 28, 320, 1680);
+		.calcLineHeight(18, 32, 320, 1680);
+		font-weight: 500;
+	}
+}
+@keyframes scroll {
+	0%   {transform: translateY(0);}
+	50%   {transform: translateY(5px); color: @green;}
+	100% {transform: translateY(0);}
+}

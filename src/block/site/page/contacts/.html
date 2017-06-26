@@ -1,0 +1,66 @@
+<div class="content-block {{class}}" role="main">
+	<div class="container content-block__container">
+		[[azbntple 
+			tpl="/src/block/site/default/page-header/heading.html" 
+			header_prefix="page-header__" 
+			header="Контакты"
+		]]
+		<div class="{{prefix_block}}block">
+			<div class="{{prefix_block}}row row  is--wrap  is--gutter">
+				<div class="{{prefix_block}}cols cols  is--cols-12">	
+					<div class="{{prefix_block}}item">
+						<span class="{{prefix_block}}item-head">Офис:</span>
+						{{contacts.office}}
+					</div>
+				</div>			
+				<div class="{{prefix_block}}cols cols">				
+					<div class="{{prefix_block}}item  is--icon">
+						<div><span class="{{prefix_block}}item-head">{{contacts.name}}:</span></div>
+						<div>{{contacts.address}}</div>
+						<span class="{{prefix_block}}item-icon">
+							[[azbntple tpl="/src/block/site/default/svg-sprite/.html" icon-name="map" ]]
+						</span>
+					</div>
+				</div>
+				<div class="{{prefix_block}}cols cols">				
+					<div class="{{prefix_block}}item">
+						<div><span class="{{prefix_block}}item-head">Широта:</span> {{contacts.lat}}</div>
+						<div><span class="{{prefix_block}}item-head">Долгота:</span> {{contacts.long}}</div>
+					</div>
+				</div>
+				<div class="{{prefix_block}}cols cols">
+					[[azbntple 
+						tpl="/src/block/site/default/social/item.html" social_prefix="social__"
+						social_href="mailto:ecoostrov@mail.ru"
+						social_target="  "
+						social_mode="is--contacts"
+						social_icon="email"
+						social_name="<span>ecoostrov</span>@mail.ru"
+					]]
+				</div>
+				<div class="{{prefix_block}}cols cols">
+					[[azbntple 
+						tpl="/src/block/site/default/social/item.html" social_prefix="social__"
+						social_href="tel:+79103008727"
+						social_target="  "
+						social_mode="is--contacts"
+						social_icon="tel"
+						social_name="+7 (910) <span>300-87-27</span>"
+					]]
+				</div>
+				<div class="{{prefix_block}}cols cols  is--btn">					
+					[[azbntple 
+						tpl="/src/block/site/default/button/button-modal.html"
+						button_prefix="btn__" 
+						button_mod="is--block" 
+						button_target="modal-reviews"
+						button_name="Связаться с нами" 
+					]] 
+				</div>
+			</div>
+		</div>
+		<div class="{{prefix_block}}map">
+			<div class="{{prefix_block}}map-item" id="map-eco"></div>
+		</div>
+	</div>
+</div>

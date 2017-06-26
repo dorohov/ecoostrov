@@ -1,0 +1,37 @@
+<div class="{{card_prefix}}block">
+	[[azbntple 
+		tpl="/src/block/site/default/page-header/heading-item.html" 
+		header_prefix="page-header__" 
+		header_level="h3"
+		header_mod="is--panel"
+		header="Цены:" 
+	]]	
+	<div class="row {{card_prefix}}row  is--wrap  is--gutter">
+		<div class="cols {{card_prefix}}cols  is--cols-3">			
+			[[azbntple 
+				tpl="/src/block/site/default/card/item-cost.html" 
+				card_prefix="card-item-cost__" 
+				card_heading="Взрослый билет" 
+				card_cost="150" 
+				card_cost_val="p."
+				card_cost_val_before="  "  
+			]]		
+			[[azbntple 
+				tpl="/src/block/site/default/card/item-cost.html" 
+				card_prefix="card-item-cost__" 
+				card_heading="Детский билет" 
+				card_cost="50" 
+				card_cost_val="p."
+				card_cost_val_before="  "  
+			]]	
+			[[azbntple 
+				tpl="/src/block/site/default/card/item-cost.html" 
+				card_prefix="card-item-cost__" 
+				card_heading="Дети до 3-х лет" 
+				card_cost=" 0" 
+				card_cost_val="p." 
+				card_cost_val_before="  " 
+			]]
+		</div>
+	</div>
+</div> 
