@@ -105,6 +105,30 @@ a{
 		}
 	}
 }
+.ruble-icon{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-image: url("@{url-path-img}/svg/ruble.svg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	@media @media-size-xs {
+		width: 16px;
+		height: 16px;
+	}
+	&.is--green{
+		background-image: url("@{url-path-img}/svg/ruble-green.svg");
+	}
+	&.is--small{
+		width: 16px;
+		height: 16px;
+		@media @media-size-xs {
+			width: 14px;
+			height: 14px;
+		}
+	}
+}
 /*
 .content-container{	
 	@media @media-screen{

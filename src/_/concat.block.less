@@ -181,7 +181,13 @@
 			}	
 		}
 		&.is--cols-2-5{
+			@media @media-size-xs-p {.makeCols(12, 12);}
+			@media @media-size-xs-l {.makeCols(6, 12);}
+			@media @media-size-sm {.makeCols(4, 12);}
 			.makeCols(2.4, 12);
+		}
+		&.is--cols-4{
+			@media @media-size-sm {.makeCols(12, 12);}
 		}
 	}
 	&item-num{		
