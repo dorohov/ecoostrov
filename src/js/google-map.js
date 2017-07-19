@@ -11,6 +11,8 @@ function initMap() {
 				//scrollwheel: false,	
 				//styles: styleMapOfficeOne
 			},
+			directionsDisplay = new google.maps.DirectionsRenderer(),
+			directionsService = new google.maps.DirectionsService(),
 			idOfficeOne = document.getElementById('map-eco'),
 			mapOfficeOne = new google.maps.Map(idOfficeOne, optionsMapOfficeOne),		
 			//iconOfficeOne = '/img/default/icon-map.png',
@@ -29,6 +31,21 @@ function initMap() {
 				position: iconCoordOfficeOne,
 				map: mapOfficeOne,
 				icon: iconOfficeOne
+			});
+			
+			directionsDisplay.setMap(mapOfficeOne);
+			
+			var start = {lat: 52.970143, lng: 36.063397};
+			var end = coordMapOfficeOne;
+			var request = {
+				origin: start,
+				destination: end,
+				travelMode: 'DRIVING'
+			};
+			directionsService.route(request, function(result, status) {
+				if (status == 'OK') {
+					directionsDisplay.setDirections(result);
+				}
 			});
 			
 			/*$(window).on('resize', function() {
