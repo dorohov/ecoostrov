@@ -36,7 +36,7 @@ function initMap() {
 			directionsDisplay.setMap(mapOfficeOne);
 			
 			var start = {lat: 52.970143, lng: 36.063397};
-			var end = coordMapOfficeOne;
+			var end = iconCoordOfficeOne;
 			var request = {
 				origin: start,
 				destination: end,
