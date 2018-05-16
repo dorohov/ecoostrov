@@ -52,13 +52,27 @@
 	}
 	&row{
 		@media @media-device {justify-content: center;}
-		@media @media-size-xxl {
+		/*@media @media-size-xxl {
 			margin-left: -55px;
 			margin-right: -55px;
-		}
+		}*/
 	}
 	&cols{
-		@media @media-size-xxl {
+		.makeCols(12, 12);
+		@media @media-size-xs-l {
+			.makeCols(6, 12); 
+		} 
+		@media @media-size-sm {
+			.makeCols(6, 12); 
+		} 
+		@media @media-size-sm-l {
+			.makeCols(3, 12); 
+		} 
+
+		@media @media-screen {
+			.makeCols(3, 12);
+		}
+		/*@media @media-size-xxl {
 			padding-left: 55px;
 			padding-right: 55px;
 		}
@@ -66,7 +80,7 @@
 			@media @media-size-xs-l {
 				.makeCols(4, 12); 
 			} 
-		} 
+		} */
 	}
 }
 .category-item__{
